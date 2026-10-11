@@ -9,10 +9,10 @@
 
 | Система | Файл |
 |---|---|
-| **macOS** 13+ (Apple Silicon и Intel) | [PilotTranslator-1.2-macOS.dmg](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/PilotTranslator-1.2-macOS.dmg) — 1,6 МБ |
-| **Windows** 10 / 11 (64-bit) | [PilotTranslator-1.2-Windows-x64.exe](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/PilotTranslator-1.2-Windows-x64.exe) — 70 МБ |
-| **Ubuntu / Debian / Mint** | [pilot-translator_1.2_all.deb](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/pilot-translator_1.2_all.deb) — 0,3 МБ |
-| **Другой Linux** (Fedora, Arch…) | [pilot-translator-1.2.tar.gz](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/pilot-translator-1.2.tar.gz) — 0,3 МБ |
+| **macOS** 13+ (Apple Silicon и Intel) | [PilotTranslator-1.3-macOS.dmg](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/PilotTranslator-1.3-macOS.dmg) — 1,6 МБ |
+| **Windows** 10 / 11 (64-bit) | [PilotTranslator-1.3-Windows-x64.exe](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/PilotTranslator-1.3-Windows-x64.exe) — 70 МБ |
+| **Ubuntu / Debian / Mint** | [pilot-translator_1.3_all.deb](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/pilot-translator_1.3_all.deb) — 0,3 МБ |
+| **Другой Linux** (Fedora, Arch…) | [pilot-translator-1.3.tar.gz](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/pilot-translator-1.3.tar.gz) — 0,3 МБ |
 
 Все версии — на странице [релизов](https://github.com/abendryu/pilot-translator-releases/releases).
 
@@ -35,15 +35,15 @@
 **Windows.** Просто запусти exe — устанавливать ничего не нужно. Windows покажет «Windows защитила
 компьютер» (программа не подписана): «Подробнее» → «Выполнить в любом случае».
 
-**Ubuntu / Debian / Mint.** `sudo apt install ./pilot-translator_1.2_all.deb` — всё нужное подтянется само.
+**Ubuntu / Debian / Mint.** `sudo apt install ./pilot-translator_1.3_all.deb` — всё нужное подтянется само.
 
-**Arch (в т.ч. Hyprland).** Поставь зависимости и запусти `./install.sh` из архива:
+**Arch, CachyOS (Hyprland, Niri…).** Поставь зависимости и запусти `./install.sh` из архива:
 `sudo pacman -S --needed python-gobject python-cairo gtk3 gtk-layer-shell wl-clipboard libayatana-appindicator tesseract tesseract-data-eng tesseract-data-rus espeak-ng grim slurp`
 
 **Fedora и другие.** Распакуй архив и запусти `./install.sh` — поставит в домашнюю папку без sudo и сразу
 покажет, каких пакетов не хватает (то же самое — команда `pilot-translator --doctor`).
 
-В Hyprland, sway и KDE самолётик работает как оверлей поверх окон — для этого нужны `gtk-layer-shell` и
+В Hyprland, Niri, sway и KDE самолётик работает как оверлей поверх окон — для этого нужны `gtk-layer-shell` и
 `wl-clipboard`. Горячая клавиша в Hyprland: `bind = CTRL ALT, Y, exec, ~/.local/bin/pilot-translator --translate`.
 
 ## Приватность
