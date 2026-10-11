@@ -9,17 +9,20 @@
 
 | Система | Файл |
 |---|---|
-| **macOS** 13+ (Apple Silicon и Intel) | [PilotTranslator-1.3-macOS.dmg](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/PilotTranslator-1.3-macOS.dmg) — 1,6 МБ |
-| **Windows** 10 / 11 (64-bit) | [PilotTranslator-1.3-Windows-x64.exe](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/PilotTranslator-1.3-Windows-x64.exe) — 70 МБ |
-| **Ubuntu / Debian / Mint** | [pilot-translator_1.3_all.deb](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/pilot-translator_1.3_all.deb) — 0,3 МБ |
-| **Другой Linux** (Fedora, Arch…) | [pilot-translator-1.3.tar.gz](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/pilot-translator-1.3.tar.gz) — 0,3 МБ |
+| **macOS** 13+ (Apple Silicon и Intel) | [PilotTranslator-1.4-macOS.dmg](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/PilotTranslator-1.4-macOS.dmg) — 1,1 МБ |
+| **Windows** 10 / 11 (64-bit) | [PilotTranslator-1.4-Windows-x64.exe](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/PilotTranslator-1.4-Windows-x64.exe) — 70 МБ |
+| **Ubuntu / Debian / Mint** | [pilot-translator_1.4_all.deb](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/pilot-translator_1.4_all.deb) — 0,4 МБ |
+| **Другой Linux** (Fedora, Arch…) | [pilot-translator-1.4.tar.gz](https://github.com/abendryu/pilot-translator-releases/releases/latest/download/pilot-translator-1.4.tar.gz) — 0,4 МБ |
 
 Все версии — на странице [релизов](https://github.com/abendryu/pilot-translator-releases/releases).
 
 ## Что умеет
 
 - **Перевод выделенного текста** в любом приложении — мышкой, двойным кликом или Shift+стрелками
-- **Перевод области экрана** — картинки, кадры видео, PDF-сканы; текст распознаётся прямо на компьютере
+- **Перевод области экрана** — картинки, кадры видео, PDF-сканы; текст распознаётся прямо на компьютере.
+  Двойной клик по самолётику — и выделяй область
+- **Запасные переводчики** — если Google пишет «слишком много обращений», перевод сам уходит на запасной
+  адрес Google или в MyMemory, ничего настраивать не нужно
 - **Уборщик** — раскладывает скопированную кашу из комментариев и лент: убирает «Ответить», счётчики лайков
 - **Горячая клавиша** — ⌥⌘T на Mac, Ctrl+Alt+T на Windows, Ctrl+Alt+Y на Linux; можно назначить свою
 - **Озвучка** перевода и копирование в один клик
@@ -35,7 +38,7 @@
 **Windows.** Просто запусти exe — устанавливать ничего не нужно. Windows покажет «Windows защитила
 компьютер» (программа не подписана): «Подробнее» → «Выполнить в любом случае».
 
-**Ubuntu / Debian / Mint.** `sudo apt install ./pilot-translator_1.3_all.deb` — всё нужное подтянется само.
+**Ubuntu / Debian / Mint.** `sudo apt install ./pilot-translator_1.4_all.deb` — всё нужное подтянется само.
 
 **Arch, CachyOS (Hyprland, Niri…).** Поставь зависимости и запусти `./install.sh` из архива:
 `sudo pacman -S --needed python-gobject python-cairo gtk3 gtk-layer-shell wl-clipboard libayatana-appindicator tesseract tesseract-data-eng tesseract-data-rus espeak-ng grim slurp`
@@ -48,6 +51,7 @@
 
 ## Приватность
 
-- Выделенный текст отправляется на перевод в Google Translate.
+- Выделенный текст отправляется на перевод в Google Translate. Только если Google отказал —
+  в запасной сервис MyMemory (Translated, Италия).
 - Пароли, токены, ключи и номера карт **не отправляются**; менеджеры паролей летчик не читает.
 - Снимки экрана распознаются на компьютере, никуда не уходят и не хранятся.
